@@ -21,7 +21,7 @@ def apple_convert(apple_ecg, apple_ecg_name):
     print("Resampled (SciPy) shape:", ecg_resampled.shape)
     
     # Save the resampled ECG as a numpy file
-    output_path = f'./500hz_apple/500hz_{filename}.npy'
+    output_path = f'./500hz_apple/500hz_{filename}'
     np.save(output_path, ecg_resampled)
     print(f"Resampled ECG saved to: {output_path}")
 
@@ -38,8 +38,8 @@ def apple_convert(apple_ecg, apple_ecg_name):
     print("Reshaped ECG:", ecg_segment_reshaped)
 
     # Save the reshaped ECG as a numpy file
-    output_segment_path = f'./500hz_10sec_apple/500hz_10sec_{filename}.npy'
-    np.save(output_segment_path, ecg_segment)
+    output_segment_path = f'./500hz_10sec_apple/500hz_10sec_{filename}'
+    np.save(output_segment_path, ecg_segment_reshaped)
     print(f"Segmented ECG saved to: {output_segment_path}")
 
 
@@ -54,7 +54,7 @@ def clinical_convert(clinical_ecg, clinical_ecg_name):
     print(first_lead)
 
     # Save the first lead ECG as a numpy file
-    output_path = f'./first_lead_clinical/first_lead_{filename}.npy'
+    output_path = f'./first_lead_clinical/first_lead_{filename}'
     np.save(output_path, first_lead)
     print(f"First lead ECG saved to: {output_path}")
 
